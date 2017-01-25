@@ -5,7 +5,7 @@
       "creator": "The Beatles",
       "description": "We're putting out an album. Please Help us fund it",
       "fundingGoal": 4500,
-      "achieved": null,
+      "achieved": false,
       "image": "https://en.wikipedia.org/wiki/Abbey_Road#/media/File:Beatles_-_Abbey_Road.jpg",
       "popularity": 300
     },
@@ -13,7 +13,7 @@
         "creator": "Me",
         "description": "I needa house.  Would you buy it for me?",
         "fundingGoal": 500000,
-        "achieved":null,
+        "achieved":false,
         "image": "http://richglare.com/wp-content/uploads/2014/02/hammer-house.jpg",
         "popularity": 3}
   ],
