@@ -1,0 +1,48 @@
+{
+  "projects" : [
+    {
+      "name": "Band Album",
+      "creator": "The Beatles",
+      "description": "We're putting out an album. Please Help us fund it",
+      "fundingGoal": 4500,
+      "achieved": null,
+      "image": "https://en.wikipedia.org/wiki/Abbey_Road#/media/File:Beatles_-_Abbey_Road.jpg",
+      "popularity": 300
+    },
+    {   "name": "Buy Me a House",
+        "creator": "Me",
+        "description": "I needa house.  Would you buy it for me?",
+        "fundingGoal": 500000,
+        "achieved":null,
+        "image": "http://richglare.com/wp-content/uploads/2014/02/hammer-house.jpg",
+        "popularity": 3}
+  ],
+  "ideas": [
+    {   "name": "Give Snakes Silly Hats",
+        "creator": "Josh",
+        "description": "We want to give snakes silly hats",
+        "fundingGoal": "500",
+        "image": "http://static.boredpanda.com/blog/wp-content/uploads/2015/11/cute-snakes-wear-hats-106__700.jpg",
+        "popularity": 1000},
+    {   "name": "Particle Accelerator",
+        "creator": "Dick Feynman",
+        "description": "Build a particle accelerator 4 me.  NBD",
+        "fundingGoal": "10000000000",
+        "image": "https://i.ytimg.com/vi/z4Rf33Hf7Dw/hqdefault.jpg",
+        "popularity": 100}
+  ],
+  "charitableActs": [
+    {   "name": "Buy me a house",
+        "creator": "Still Me ",
+        "description": "I really need this house",
+        "fundingGoal": 500000,
+        "image": "http://homesoftherich.net/wp-content/uploads/2010/12/Screen-shot-2010-12-22-at-11.42.01-AM.png",
+        "popularity": 4},
+    {   "name": "Feed The Peopl",
+        "creator": "The Pope",
+        "description": "Help me feed the children, yo",
+        "fundingGoal": 1000000,
+        "image": "https://fortunedotcom.files.wordpress.com/2014/08/vat01_4.jpg",
+        "popularity": 700}
+  ]
+}
