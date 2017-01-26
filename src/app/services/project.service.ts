@@ -15,4 +15,8 @@ export class ProjectService {
     return this.projects;
   }
 
+  addProject(project: Project):void {
+    this.projects.push(project);
+  }
+
 }

@@ -14,5 +14,8 @@ export class IdeaService {
   getIdeas() {
     return this.ideas;
   }
+  addIdea(idea: Idea):void {
+    this.ideas.push(idea);
+  }
 
 }

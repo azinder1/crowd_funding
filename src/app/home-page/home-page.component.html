@@ -1,41 +1,42 @@
-<p>
-You have made it to our homepage!!
-</p>
-
-<hr>
 <h3>New Thing</h3>
 <div class="row">
+  <form (ngSubmit)="submitForm(newName.value, newCreator.value, newDescription.value, newFundGoal.value, newImage.value); newName.value=''; newCreator.value=''; newDescription.value=''; newFundGoal.value=''; newImage.value='';">
+
   <div class="input-field col s6">
-    <input #newCreator>
+    <input #newCreator required>
     <label class="active" for="creator">Your name</label>
   </div>
   <div class="input-field col s6">
-    <input #newName>
+    <input #newName required>
     <label class="active" for="name">Name of your thing</label>
   </div>
   <div class="input-field col s6">
-    <input #newDescription>
+    <input #newDescription required>
     <label class="active" for="description">Description of thing</label>
   </div>
   <div class="input-field  col s6">
-    <input #newFundGoal>
+    <input type="number" #newFundGoal required>
     <label class="active" for="fundGoal">Funding Amount</label>
   </div>
   <div class="input-field col s6">
-    <input #newImage>
-    <label class="active" for="image">Link to your image of your thing</label>
+    <input #newImage >
+    <label class="active" for="image">Link to your image of your thing (optional)</label>
   </div>
-  <p>
-     <input name="group1" type="radio" id="test1" />
-     <label for="test1">Red</label>
-   </p>
-   <p>
-     <input name="group1" type="radio" id="test2" />
-     <label for="test2">Yellow</label>
-   </p>
-   <p>
-     <input class="group1" name="group1" type="radio" id="test3"  />
-     <label for="test3">Green</label>
-   </p>
-  <button class="btn" (click)="submitForm(newName, newCreator, newDescription, newFundGoal, newImage, objectType); newName.value=''; newCreator.value=''; newDescription.value=''; newFundGoal.value=''; newImage.value='';">Add Thing</button>
+  <div class="col s8">
+    <p>
+      <input (click)="setFundingType('project')" name="fundingType" type="radio" id="project" checked/>
+      <label for="project">Project</label>
+    </p>
+    <p>
+      <input (click)="setFundingType('charitableAct')" name="fundingType" type="radio" id="charitableAct"/>
+      <label for="charitableAct">Charitable Act</label>
+    </p>
+    <p>
+      <input (click)="setFundingType('idea')" name="fundingType" type="radio" id="idea"  />
+      <label for="idea">Idea</label>
+    </p>
+    <button class="btn" type="submit">Add Thing</button>
+
+  </div>
+  </form>
 </div>

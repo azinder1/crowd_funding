@@ -15,4 +15,8 @@ export class CharitableActService {
     return this.charitableActs;
   }
 
+  addCharitableAct(charitableAct: CharitableAct):void {
+    this.charitableActs.push(charitableAct);
+  }
+
 }
