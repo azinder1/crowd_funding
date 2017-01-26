@@ -1,6 +1,6 @@
 <div *ngFor="let idea of ideas | async">
   <img src={{idea.image}} alt="Idea image"/>
-  <h3>{{idea.name}}</h3>
+  <h3 (click)="goToPage(idea.id)">{{idea.name}}</h3>
   <p><small>Posted by {{idea.creator}}</small></p>
   <p>{{idea.description}}</p>
   <br>

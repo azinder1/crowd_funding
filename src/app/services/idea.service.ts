@@ -17,5 +17,7 @@ export class IdeaService {
   addIdea(idea: Idea):void {
     this.ideas.push(idea);
   }
-
+  getIdeaById(id: string) {
+    return this.angularFire.database.object('ideas/' + id);
+  }
 }

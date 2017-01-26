@@ -18,5 +18,8 @@ export class CharitableActService {
   addCharitableAct(charitableAct: CharitableAct):void {
     this.charitableActs.push(charitableAct);
   }
+  getCharitableActById(id: string) {
+    return this.angularFire.database.object('charitableActs/' + id);
+  }
 
 }

@@ -1,6 +1,6 @@
 <div *ngFor="let project of projects | async">
   <img src={{project.image}} alt="Idea image"/>
-  <h3>{{project.name}}</h3>
+  <h3 routerLink="{{project.id}}">{{project.name}}</h3>
   <p><small>Posted by {{project.creator}}</small></p>
   <p>{{project.description}}</p>
   <br>

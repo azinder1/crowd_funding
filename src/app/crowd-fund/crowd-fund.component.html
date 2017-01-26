@@ -1,0 +1,10 @@
+
+<img src='{{(displayObject | async)?.image }}' alt="" />
+<h2>{{(displayObject | async)?.name}}</h2>
+<p>
+{{(displayObject | async)?.description}}--{{(displayObject | async)?.creator}}
+</p>
+<ul>
+  <li>Funding Goal: {{(displayObject | async)?.fundingGoal}}</li>
+  <li>Up Votes: {{(displayObject | async)?.popularity}}</li>
+</ul>
