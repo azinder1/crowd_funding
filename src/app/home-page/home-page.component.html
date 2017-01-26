@@ -1,3 +1,33 @@
 <p>
-  home-page works!
+You have made it to our homepage!!
 </p>
+
+<hr>
+<h3>New Thing</h3>
+<div class="row">
+  <div class="input-field col s6">
+    <input #newCreator>
+    <label class="active" for="creator">Your name</label>
+  </div>
+  <div class="input-field col s6">
+    <input #newName>
+    <label class="active" for="name">Name of your thing</label>
+  </div>
+  <div class="input-field col s6">
+    <input #newDescription>
+    <label class="active" for="description">Description of thing</label>
+  </div>
+  <div class="input-field  col s6">
+    <input #newFundGoal>
+    <label class="active" for="fundGoal">Funding Amount</label>
+  </div>
+  <div class="input-field col s6">
+    <input #newImage>
+    <label class="active" for="image">Link to your image of your thing</label>
+  </div>
+  <p>
+    <input name="group1" type="radio" id="test1" />
+    <label for="test1">Red</label>
+  </p>
+  <button class="btn" (click)="submitForm(newName, newCreator, newDescription, newFundGoal, newImage, objectType); newName.value=''; newCreator.value=''; newDescription.value=''; newFundGoal.value=''; newImage.value='';">Add Thing</button>
+</div>

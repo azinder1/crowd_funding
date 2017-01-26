@@ -1,3 +1,10 @@
-<p>
-  ideas works!
-</p>
+<div *ngFor="let idea of ideas | async">
+  <img src={{idea.image}} alt="Idea image"/>
+  <h3>{{idea.name}}</h3>
+  <p><small>Posted by {{idea.creator}}</small></p>
+  <p>{{idea.description}}</p>
+  <br>
+  <p><small>Funding goal: ${{idea.fundingGoal}}</small></p>
+  <p><small>Popularity: {{idea.popularity}}</small></p>
+  <hr>
+</div>

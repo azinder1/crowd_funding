@@ -1,3 +1,10 @@
-<p>
-  charitable-acts works!
-</p>
+<div *ngFor="let charitableAct of charitableActs | async">
+  <img src={{charitableAct.image}} alt="Idea image"/>
+  <h3>{{charitableAct.name}}</h3>
+  <p><small>Posted by {{charitableAct.creator}}</small></p>
+  <p>{{charitableAct.description}}</p>
+  <br>
+  <p><small>Funding goal: ${{charitableAct.fundingGoal}}</small></p>
+  <p><small>Popularity: {{charitableAct.popularity}}</small></p>
+  <hr>
+</div>

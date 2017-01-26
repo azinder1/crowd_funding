@@ -6,7 +6,7 @@
       "description": "We're putting out an album. Please Help us fund it",
       "fundingGoal": 4500,
       "achieved": false,
-      "image": "https://en.wikipedia.org/wiki/Abbey_Road#/media/File:Beatles_-_Abbey_Road.jpg",
+      "image": "https://upload.wikimedia.org/wikipedia/en/4/42/Beatles_-_Abbey_Road.jpg",
       "popularity": 300
     },
     {   "name": "Buy Me a House",
@@ -38,7 +38,7 @@
         "fundingGoal": 500000,
         "image": "http://homesoftherich.net/wp-content/uploads/2010/12/Screen-shot-2010-12-22-at-11.42.01-AM.png",
         "popularity": 4},
-    {   "name": "Feed The Peopl",
+    {   "name": "Feed The People",
         "creator": "The Pope",
         "description": "Help me feed the children, yo",
         "fundingGoal": 1000000,
