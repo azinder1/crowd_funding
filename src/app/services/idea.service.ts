@@ -20,4 +20,9 @@ export class IdeaService {
   getIdeaById(id: string) {
     return this.angularFire.database.object('ideas/' + id);
   }
+
+  addDonation(amount, ideaToDonateTo) {
+    var ideaInFirebase = this.getIdeaById(ideaToDonateTo.$key);
+    ideaInFirebase.update({currentFunding: (amount + ideaToDonateTo.currentFunding)})
+  }
 }

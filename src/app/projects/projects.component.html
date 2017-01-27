@@ -1,11 +1,20 @@
-<div *ngFor="let project of projects | async">
-  <img src={{project.image}} alt="Idea image"/>
-  <h3 routerLink="{{project.id}}">{{project.name}}</h3>
-  <p><small>Posted by {{project.creator}}</small></p>
-  <p>{{project.description}}</p>
-  <br>
-  <p><small>Funding goal: ${{project.fundingGoal}}</small></p>
-  <p><small>Popularity: {{project.popularity}}</small></p>
-  <p><small>Current Funding: {{project.currentFunding}}</small></p>
-  <hr>
+
+<div class="row">
+  <div *ngFor="let project of projects | async">
+    <div class="col m6">
+      <div class="card grey lighten-3">
+        <div class="card-content">
+          <img src={{project.image}} alt="Idea image"/>
+          <h3 (click)="goToDetailPage(project)">{{project.name}}</h3>
+          <p><small>Posted by {{project.creator}}</small></p>
+          <p>{{project.description}}</p>
+          <br>
+          <p><small>Funding goal: ${{project.fundingGoal}}</small></p>
+          <p><small>Popularity: {{project.popularity}}</small></p>
+          <p><small>Current Funding: {{project.currentFunding}}</small></p>
+          <hr>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

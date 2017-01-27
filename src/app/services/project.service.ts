@@ -12,6 +12,7 @@ export class ProjectService {
   }
 
   getProjects() {
+    console.log(this.projects)
     return this.projects;
   }
 
@@ -23,4 +24,8 @@ export class ProjectService {
     return this.angularFire.database.object('projects/' + id);
   }
 
+  addDonation(amount, projectToDonateTo) {
+    var projectInFirebase = this.getProjectById(projectToDonateTo.$key);
+    projectInFirebase.update({currentFunding: (amount)})
+  }
 }

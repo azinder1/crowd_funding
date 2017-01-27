@@ -22,4 +22,10 @@ export class CharitableActService {
     return this.angularFire.database.object('charitableActs/' + id);
   }
 
+  addDonation(amount, charitableActToDonateTo) {
+    var charitableActInFirebase = this.getCharitableActById(charitableActToDonateTo.$key);
+    charitableActInFirebase.update({currentFunding: (amount + charitableActToDonateTo.currentFunding)})
+    console.log("hello");
+  }
+
 }

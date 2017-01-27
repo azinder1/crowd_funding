@@ -19,4 +19,7 @@ export class CharitableActsComponent implements OnInit {
   ngOnInit() {
     this.charitableActs = this.charitableActService.getCharitableActs();
   }
+  goToDetailPage(charitableActId: string, objectType: string): void {
+    this.router.navigate([objectType, charitableActId]);
+  }
 }

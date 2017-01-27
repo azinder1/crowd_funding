@@ -37,8 +37,23 @@ export class CrowdFundComponent implements OnInit {
       this.displayObject = this.projectService.getProjectById(this.objectId);
     } else if (this.objectType === 'ideas') {
       this.displayObject = this.ideaService.getIdeaById(this.objectId);
-    } else if (this.objectType === 'charitableActs') {
+    } else if (this.objectType === 'charitable-acts') {
       this.displayObject = this.charitableActService.getCharitableActById(this.objectId);
+    }
+  }
+  getDonation(displayObject: any, newDonation: string): void {
+    var numberAmount: number = parseInt(newDonation);
+    var crowdFundObject = null;
+    this.displayObject.subscribe(returned_object => {
+      crowdFundObject = returned_object;
+      numberAmount += parseInt(returned_object.currentFunding);
+    });
+    if (this.objectType === 'projects') {
+      this.projectService.addDonation(numberAmount, crowdFundObject)
+    } else if (this.objectType === 'ideas') {
+      this.ideaService.addDonation(numberAmount, crowdFundObject)
+    } else if (this.objectType === 'charitable-acts') {
+      this.charitableActService.addDonation(numberAmount, crowdFundObject)
     }
   }
 }

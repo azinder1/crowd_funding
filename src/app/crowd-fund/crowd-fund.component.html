@@ -1,10 +1,26 @@
-
-<img src='{{(displayObject | async)?.image }}' alt="" />
-<h2>{{(displayObject | async)?.name}}</h2>
-<p>
-{{(displayObject | async)?.description}}--{{(displayObject | async)?.creator}}
-</p>
-<ul>
-  <li>Funding Goal: {{(displayObject | async)?.fundingGoal}}</li>
-  <li>Up Votes: {{(displayObject | async)?.popularity}}</li>
-</ul>
+<div class="row">
+  <div class="col m12">
+    <div class="card grey lighten-3">
+      <div class="card-content">
+        <img class="fundMeImage" src='{{(displayObject | async)?.image }}' alt="" />
+        <h2>{{(displayObject | async)?.name}}</h2>
+        <div class="row">
+          <div class="col m7">
+            <p>
+              {{(displayObject | async)?.description}}--{{(displayObject | async)?.creator}}
+            </p>
+            <ul>
+              <li>Funding Goal: {{(displayObject | async)?.fundingGoal}}</li>
+              <li>Up Votes: {{(displayObject | async)?.popularity}}</li>
+            </ul>
+          </div>
+          <div class="col m5">
+            <label for="">Fund Me!</label>
+            <input #newDonationAmount type="number">
+            <button class="btn red lighten-2" (click)="getDonation(displayObject, newDonationAmount.value)">Fund</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

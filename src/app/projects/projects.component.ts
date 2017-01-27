@@ -12,11 +12,16 @@ import { AngularFire, FirebaseListObservable } from 'angularfire2';
 })
 
 export class ProjectsComponent implements OnInit {
+  objectType: string;
+
   projects: FirebaseListObservable<any[]>
 
   constructor(private router: Router, private projectService: ProjectService) { }
 
   ngOnInit() {
     this.projects = this.projectService.getProjects();
+  }
+  goToDetailPage(clickedProject): void {
+    this.router.navigate(['projects', clickedProject.$key]);
   }
 }

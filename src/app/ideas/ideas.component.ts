@@ -19,4 +19,7 @@ export class IdeasComponent implements OnInit {
   ngOnInit() {
     this.ideas = this.ideaService.getIdeas();
   }
+  goToDetailPage(clickedIdea): void {
+    this.router.navigate(['ideas', clickedIdea.$key]);
+  }
 }
